@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skye - Valorant</title>
+    <style>
+        :root {
+            --skye-green: #4caf50;
+            --skye-dark: #1b5e20;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .agent-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--skye-green);
+        }
+        .agent-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--skye-green);
+            padding-bottom: 20px;
+        }
+        .agent-image {
+            width: 200px;
+            border-radius: 8px;
+            margin-right: 30px;
+            border: 3px solid var(--skye-dark);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: var(--skye-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .back-button:hover {
+            background-color: var(--skye-dark);
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+        }
+        h1 {
+            color: var(--skye-dark);
+            margin-top: 0;
+            position: relative;
+        }
+        h1::before {
+            content: "🌿 ";
+        }
+        h2 {
+            color: var(--skye-dark);
+            border-bottom: 2px solid var(--skye-green);
+            padding-bottom: 10px;
+        }
+        .abilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .ability {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--skye-green);
+            transition: transform 0.3s;
+        }
+        .ability:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.1);
+        }
+        .ability img {
+            max-width: 60px;
+            display: block;
+            margin: 10px auto;
+        }
+        .healing-section {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid var(--skye-green);
+        }
+        .creature-guide {
+            columns: 2;
+            column-gap: 30px;
+            margin-top: 15px;
+        }
+        @media (max-width: 768px) {
+            .agent-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .agent-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .abilities {
+                grid-template-columns: 1fr;
+            }
+            .creature-guide {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="agent-container">
+        <div class="agent-header">
+            <img src="../imgs/skye.png" alt="Skye" class="agent-image">
+            <div>
+                <h1>SKYE</h1>
+                <p><strong>Função:</strong> Iniciador</p>
+                <p><strong>Biografia:</strong> Vinda da Austrália, Skye e seu bando de feras desbravam territórios perigosos. Com suas criações que desafiam a natureza, ela lidera o caminho para sua equipe e corta o avanço inimigo.</p>
+            </div>
+        </div>
+        
+        <h2>CRIATURAS DA NATUREZA</h2>
+        <div class="abilities">
+            <div class="ability">
+                <h3>LUZ DESBRAVADORA</h3>
+                <img src="../imgs/skye bang.webp" alt="Luz Desbravadora">
+                <p><strong>Q</strong> - Um falcão que pode ser controlado para cegar inimigos no caminho.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>LUZ GUIADORA</h3>
+                <img src="../imgs/dog.jpg" alt="Luz Guiadora">
+                <p><strong>E</strong> - Uma fera que cura aliados na linha de visão (cura até 100HP).</p>
+            </div>
+            
+            <div class="ability">
+                <h3>REFLORESCER</h3>
+                <img src="../imgs/heal.jpg" alt="Reflorescer">
+                <p><strong>C</strong> - Envia um lobo que pode ser detonado para causar concussão.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>RASTREADORES</h3>
+                <img src="../imgs/ult skye.webp" alt="Rastreadores">
+                <p><strong>X</strong> - Invoca 3 rastreadores que caçam inimigos próximos.</p>
+            </div>
+        </div>
+        
+        <div class="healing-section">
+            <h3>ESTATÍSTICAS DE CURA</h3>
+            <div class="creature-guide">
+                <div>
+                    <p><strong>Luz Guiadora:</strong></p>
+                    <ul>
+                        <li>Cura 15HP por segundo</li>
+                        <li>Duração: 4 segundos</li>
+                        <li>Raio: 15m</li>
+                        <li>Pode curar múltiplos aliados</li>
+                    </ul>
+                </div>
+                <div>
+                    <p><strong>Dicas de Cura:</strong></p>
+                    <ul>
+                        <li>Priorize aliados com baixa vida</li>
+                        <li>Use em combinação com pushes</li>
+                        <li>Não cura através de paredes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <h2>TÁTICAS DE SUPORTE</h2>
+        <ul>
+            <li>Use o falcão para limpar ângulos perigosos</li>
+            <li>O lobo é ótimo para desalojar inimigos entocados</li>
+            <li>Rastreadores revelam posições mesmo através de paredes</li>
+            <li>Você pode redirecionar o falcão pressionando Q novamente</li>
+            <li>Comunique curas para evitar desperdício</li>
+        </ul>
+        
+        <a href="../index.html" class="back-button">← VOLTAR PARA AGENTES</a>
+    </div>
+</body>
+</html>

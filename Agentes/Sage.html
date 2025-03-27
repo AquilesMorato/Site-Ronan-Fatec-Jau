@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sage - Valorant</title>
+    <style>
+        :root {
+            --sage-teal: #26a69a;
+            --sage-dark: #00796b;
+            --sage-light: #b2dfdb;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .agent-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-top: 3px solid var(--sage-teal);
+        }
+        .agent-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--sage-teal);
+            padding-bottom: 20px;
+        }
+        .agent-image {
+            width: 200px;
+            border-radius: 8px;
+            margin-right: 30px;
+            border: 3px solid var(--sage-dark);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: var(--sage-teal);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .back-button:hover {
+            background-color: var(--sage-dark);
+            box-shadow: 0 0 10px rgba(38, 166, 154, 0.3);
+        }
+        h1 {
+            color: var(--sage-dark);
+            margin-top: 0;
+            position: relative;
+        }
+        h1::before {
+            content: "❤️ ";
+        }
+        h2 {
+            color: var(--sage-dark);
+            border-bottom: 2px solid var(--sage-light);
+            padding-bottom: 10px;
+        }
+        .abilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .ability {
+            background: #e0f2f1;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--sage-teal);
+            transition: transform 0.3s;
+        }
+        .ability:hover {
+            transform: translateY(-5px);
+            background: var(--sage-light);
+        }
+        .ability img {
+            max-width: 60px;
+            display: block;
+            margin: 10px auto;
+        }
+        .healing-section {
+            background-color: #e0f2f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid var(--sage-teal);
+        }
+        .resurrection-guide {
+            background-color: var(--sage-dark);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .resurrection-guide h3 {
+            color: var(--sage-light);
+            margin-top: 0;
+        }
+        .ability-key {
+            display: inline-block;
+            padding: 2px 8px;
+            background-color: var(--sage-dark);
+            color: white;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-right: 5px;
+        }
+        @media (max-width: 768px) {
+            .agent-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .agent-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            .abilities {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="agent-container">
+        <div class="agent-header">
+            <img src="../imgs/sage.png" alt="Sage" class="agent-image">
+            <div>
+                <h1>SAGE</h1>
+                <p><strong>Função:</strong> Sentinela</p>
+                <p><strong>Biografia:</strong> Originária da China, Sage é uma verdadeira fortaleza que traz segurança para sua equipe. Seu poder de curar aliados e até mesmo trazê-los de volta da morte muda completamente o rumo de qualquer batalha.</p>
+            </div>
+        </div>
+        
+        <h2>HABILIDADES DE SUPORTE</h2>
+        <div class="abilities">
+            <div class="ability">
+                <h3>ORBE DE CURA</h3>
+                <img src="../imgs/sage heal.jpg" alt="Orbe de Cura">
+                <p><span class="ability-key">Q</span> - Cura um aliado (ou a si mesma) em 60HP ao longo de 5 segundos.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>ORBE DE LENTIDÃO</h3>
+                <img src="../imgs/slow sage.jpg alt="Orbe de Lentidão">
+                <p><span class="ability-key">E</span> - Lança um orbe que cria um campo que reduz a velocidade dos inimigos.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>ORBE DE BARREIRA</h3>
+                <img src="../imgs/wall.webp" alt="Orbe de Barreira">
+                <p><span class="ability-key">C</span> - Constrói uma parede sólida que bloqueia passagens.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>RESSURREIÇÃO</h3>
+                <img src="../imgs/ult sage.jpg" alt="Ressurreição">
+                <p><span class="ability-key">X</span> - Revive um aliado morto com HP completo após um breve canal.</p>
+            </div>
+        </div>
+        
+        <div class="healing-section">
+            <h3>ESTATÍSTICAS DE CURA</h3>
+            <ul>
+                <li><strong>Cura por segundo:</strong> 12HP/s</li>
+                <li><strong>Tempo total de cura:</strong> 5s</li>
+                <li><strong>Alcance:</strong> 15m</li>
+                <li><strong>Cooldown:</strong> 35s</li>
+                <li><strong>Dica:</strong> Priorize aliados com operadores ou médio/longo alcance</li>
+            </ul>
+        </div>
+        
+        <div class="resurrection-guide">
+            <h3>GUIA DE RESSURREIÇÃO</h3>
+            <p><strong>Tempo de canalização:</strong> 3 segundos</p>
+            <p><strong>Posicionamento ideal:</strong></p>
+            <ul>
+                <li>Escondido atrás de cobertura</li>
+                <li>Longe de linhas de visão inimigas</li>
+                <li>Com aliados protegendo o flanco</li>
+            </ul>
+            <p><strong>Estratégia:</strong> Comunique com a equipe para criar distrações durante a ressurreição</p>
+        </div>
+        
+        <h2>DICAS DE BARREIRA</h2>
+        <ul>
+            <li>Use a parede para bloquear rotas de push inimigo</li>
+            <li>Pode ser usada para alcançar lugares altos</li>
+            <li>Destrúa partes da parede para criar fendas de tiro</li>
+            <li>Combine com Orbe de Lentidão para controle de área</li>
+            <li>800HP totais - 400HP por segmento</li>
+        </ul>
+        
+        <a href="../index.html" class="back-button">← VOLTAR PARA AGENTES</a>
+    </div>
+</body>
+</html>

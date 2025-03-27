@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jett - Valorant</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .agent-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-top: 3px solid #6bd1ff; /* Borda azul temática */
+        }
+        .agent-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #6bd1ff;
+            padding-bottom: 20px;
+        }
+        .agent-image {
+            width: 200px;
+            border-radius: 8px;
+            margin-right: 30px;
+            border: 3px solid #0f1923;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #6bd1ff;
+            color: #0f1923;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .back-button:hover {
+            background-color: #4fa8d3;
+            transform: translateY(-2px);
+        }
+        h1 {
+            color: #0f1923;
+            margin-top: 0;
+            position: relative;
+            display: inline-block;
+        }
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #6bd1ff, transparent);
+        }
+        h2 {
+            color: #6bd1ff;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .abilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .ability {
+            background: #f5fbff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #6bd1ff;
+            transition: transform 0.3s;
+        }
+        .ability:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(107,209,255,0.1);
+        }
+        .ability img {
+            max-width: 60px;
+            display: block;
+            margin: 10px 0;
+        }
+        .mobility-tips {
+            background-color: #e6f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #6bd1ff;
+        }
+        .combo-list {
+            columns: 2;
+            column-gap: 30px;
+        }
+        @media (max-width: 600px) {
+            .combo-list {
+                columns: 1;
+            }
+            .agent-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .agent-image {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="agent-container">
+        <div class="agent-header">
+            <img src="../imgs/jett.png" alt="Jett" class="agent-image">
+            <div>
+                <h1>JETT</h1>
+                <p><strong>Função:</strong> Duelista</p>
+                <p><strong>Biografia:</strong> Representando sua Coreia natal, Jett tem um estilo de luta ágil e evasivo que permite assumir riscos como ninguém. Corre pelo campo de batalha com velocidade estonteante, cortando inimigos antes que eles percebam quem ou o que os atingiu.</p>
+            </div>
+        </div>
+        
+        <h2>Habilidades Ágeis</h2>
+        <div class="abilities">
+            <div class="ability">
+                <h3>Corrente Ascendente</h3>
+                <img src="../imgs/up.jpg" alt="Corrente Ascendente">
+                <p><strong>Q</strong> - Impulsiona Jett instantaneamente para o alto.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>Brisa de Impulso</h3>
+                <img src="../imgs/dash.jpg" alt="Brisa de Impulso">
+                <p><strong>E</strong> - Jett avança rapidamente na direção atual de movimento.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>Erupção das Brumas</h3>
+                <img src="../imgs/smoke.webp" alt="Erupção das Brumas">
+                <p><strong>C</strong> - Lança um conjunto de fumaças que obscurecem a visão.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>Tormenta de Aço</h3>
+                <img src="../imgs/ult jett.webp" alt="Tormenta de Aço">
+                <p><strong>X</strong> - Equipa um conjunto de facas altamente precisas que se regeneram após abate.</p>
+            </div>
+        </div>
+        
+        <div class="mobility-tips">
+            <h3>Combos de Mobilidade</h3>
+            <div class="combo-list">
+                <p><strong>Combo Básico:</strong></p>
+                <ol>
+                    <li>Use <strong>Corrente Ascendente (Q)</strong> para ganhar altura</li>
+                    <li>No ar, ative <strong>Brisa de Impulso (E)</strong> para avançar</li>
+                    <li>Use <strong>Erupção das Brumas (C)</strong> para cobrir sua aterrissagem</li>
+                </ol>
+                
+                <p><strong>Combo Avançado:</strong></p>
+                <ol>
+                    <li>Inicie com <strong>Brisa de Impulso (E)</strong> para frente</li>
+                    <li>Imediatamente use <strong>Corrente Ascendente (Q)</strong></li>
+                    <li>No pico do salto, ative <strong>Tormenta de Aço (X)</strong></li>
+                    <li>Use o <strong>drift</strong> para controlar a queda</li>
+                </ol>
+            </div>
+        </div>
+        
+        <h2>Dicas de Operador</h2>
+        <ul>
+            <li>Use a altura para pegar ângulos inesperados</li>
+            <li>Brisa de Impulso pode reposicionar você após um tiro de sniper</li>
+            <li>Fumaças criam cobertura instantânea para escapes</li>
+            <li>Tormenta de Aço é letal em combates aéreos</li>
+            <li>Você pode "drift" no ar segurando o botão de pular</li>
+        </ul>
+        
+        <a href="../index.html" class="back-button">← Voltar para Agentes</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viper - Valorant</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .agent-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .agent-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ff4655;
+            padding-bottom: 20px;
+        }
+        .agent-image {
+            width: 200px;
+            border-radius: 8px;
+            margin-right: 30px;
+            border: 3px solid #0f1923;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff4655;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #d93a4a;
+        }
+        h1 {
+            color: #0f1923;
+            margin-top: 0;
+        }
+        h2 {
+            color: #ff4655;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .abilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .ability {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ff4655;
+        }
+        .ability img {
+            max-width: 60px;
+            display: block;
+            margin: 10px 0;
+        }
+        .toxicity {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="agent-container">
+        <div class="agent-header">
+            <img src="../imgs/viper.png" alt="Viper" class="agent-image">
+            <div>
+                <h1>VIPER</h1>
+                <p><strong>Função:</strong> Controladora</p>
+                <p><strong>Biografia:</strong> Química norte-americana, Viper empresta uma mistura de equipamentos químicos venenosos e táticos para envenenar e sufocar o campo de batalha. Se as toxinas não matarem sua presa, seus jogos mentais certamente o farão.</p>
+            </div>
+        </div>
+        
+        <h2>Habilidades</h2>
+        <div class="abilities">
+            <div class="ability">
+                <h3>Nuvem Venenosa</h3>
+                <img src="../imgs/viper smoke.webp" alt="Nuvem Venenosa">
+                <p><strong>Q</strong> - Lança um emissor de gás que pode ser reativado para criar uma nuvem tóxica duradoura.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>Cortina Tóxica</h3>
+                <img src="../imgs/wall.jpg" alt="Cortina Tóxica">
+                <p><strong>E</strong> - Dispara uma longa linha de gás que pode ser ativada para bloquear a visão.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>Veneno de Cobra</h3>
+                <img src="../imgs/posin.jpg" alt="Veneno de Cobra">
+                <p><strong>C</strong> - Lança um frasco químico que se rompe ao atingir o chão, criando uma poça química que causa dano.</p>
+            </div>
+            
+            <div class="ability">
+                <h3>Poço Peçonhento</h3>
+                <img src="../imgs/Viper_pit.webp" alt="Poço Peçonhento">
+                <p><strong>X</strong> - Libera uma enorme nuvem química que reduz o alcance de visão e a vida máxima dos inimigos.</p>
+            </div>
+        </div>
+        
+        <div class="toxicity">
+            <h3>Mecânica de Toxicidade</h3>
+            <p>Viper possui combustível limitado para suas habilidades de gás. Gerencie com:</p>
+            <ul>
+                <li>Combustível recarrega quando habilidades estão inativas</li>
+                <li>Inimigos em gás sofrem "Vulnerável" (+50% de dano recebido)</li>
+                <li>Use "E" e "Q" simultaneamente para economizar combustível</li>
+            </ul>
+        </div>
+        
+        <h2>Dicas Avançadas</h2>
+        <ul>
+            <li>Use a Cortina Tóxica para dividir o mapa</li>
+            <li>Combine Nuvem Venenosa com Veneno de Cobra para controle de área</li>
+            <li>No Poço Peçonhento, mova-se constantemente para confundir inimigos</li>
+            <li>Recarregue combustível quando seguro para manter pressão</li>
+        </ul>
+        
+        <a href="../index.html" class="back-button">← Voltar para Agentes</a>
+    </div>
+</body>
+</html>

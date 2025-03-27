@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentes Valorant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            background-color: #000000;
+            padding: 15px 20px 25px;
+            text-align: center;
+            border-bottom: 3px solid #ff4655;
+            position: relative;
+        }
+        
+        .logo {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .search-container {
+            position: absolute;
+            right: 20px;
+            bottom: 15px;
+        }
+        
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 4px;
+            padding: 4px;
+        }
+        
+        .search-box {
+            padding: 6px 10px;
+            width: 180px;
+            border: none;
+            outline: none;
+        }
+        
+        .search-button {
+            background: none;
+            border: none;
+            padding: 0 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        
+        .search-icon {
+            width: 16px;
+            height: 16px;
+            fill: #ff4655;
+        }
+        
+        .main-content {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .agents-container {
+            padding: 20px;
+            width: 80%;
+        }
+        
+        .trophy-container {
+            width: 20%;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .trophy-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 50px;
+        }
+        
+        .agents-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .agent-card {
+            width: 150px;
+            text-align: center;
+            background-color: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .agent-card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        
+        .agent-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #000000;
+        }
+        
+        .agent-name {
+            margin-top: 10px;
+            color: #333;
+            font-weight: normal; /* Removido o negrito */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./imgs/valorant.png" alt="Valorant Logo" class="logo">
+        <div class="search-container">
+            <form action="buscar.html" method="get" class="search-wrapper">
+                <button type="submit" class="search-button">
+                    <svg class="search-icon" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </button>
+                <input type="text" class="search-box" placeholder="Procurar agentes" name="agente">
+            </form>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="agents-container">
+            <h1 style="text-align: center; margin-bottom: 20px;">Principais agentes de 2025</h1>
+            
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <a href="Agentes/Omen.html">
+                        <img src="./imgs/Omen.png" alt="Omen" class="agent-image">
+                        <div class="agent-name">Omen</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/Sova.html">
+                        <img src="./imgs/sova.png" alt="Sova" class="agent-image">
+                        <div class="agent-name">Sova</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/viper.html">
+                        <img src="./imgs/viper.png" alt="Viper" class="agent-image">
+                        <div class="agent-name">Viper</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/Cypher.html">
+                        <img src="./imgs/cypher.png" alt="Cypher" class="agent-image">
+                        <div class="agent-name">Cypher</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/raze.html">
+                        <img src="./imgs/raze.png" alt="Raze" class="agent-image">
+                        <div class="agent-name">Raze</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/jett.html">
+                        <img src="./imgs/jett.png" alt="Jett" class="agent-image">
+                        <div class="agent-name">Jett</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/Kayo.html">
+                        <img src="./imgs/kayo.png" alt="KAY/O" class="agent-image">
+                        <div class="agent-name">KAY/O</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/killjoy.html">
+                        <img src="./imgs/kj.png" alt="Killjoy" class="agent-image">
+                        <div class="agent-name">Killjoy</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/Skye.html">
+                        <img src="./imgs/skye.png" alt="Skye" class="agent-image">
+                        <div class="agent-name">Skye</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/Clove.html">
+                        <img src="./imgs/Clove_icon.webp" alt="Clove" class="agent-image">
+                        <div class="agent-name">Clove</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/Sage.html">
+                        <img src="./imgs/sage.png" alt="Sage" class="agent-image">
+                        <div class="agent-name">Sage</div>
+                    </a>
+                </div>
+                
+                <div class="agent-card">
+                    <a href="Agentes/chamber.html">
+                        <img src="./imgs/chamber.png" class="agent-image">
+                        <div class="agent-name">Chamber</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="trophy-container">
+            
+            <img src="./imgs/9jeknl2vwo1b1.webp" alt="Troféu Champions 2022" class="trophy-image">
+        </div>
+    </div>
+</body>
+</html>
